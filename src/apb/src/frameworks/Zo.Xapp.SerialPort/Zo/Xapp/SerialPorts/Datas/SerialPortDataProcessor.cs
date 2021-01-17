@@ -49,7 +49,7 @@ namespace Zo.Xapp.SerialPorts.Datas
             }
         }
 
-        #region 数据事件
+        #region 数据变化事件
 
         private void RaiseRequstDataChangedEvent(List<List<byte>> requesData)
         {

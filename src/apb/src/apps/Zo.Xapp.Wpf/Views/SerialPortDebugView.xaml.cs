@@ -198,7 +198,7 @@ namespace Zo.Xapp.Wpf.Views
 
         #region 开、关串口
 
-        private void btOpenSerialPort_Click(object sender, RoutedEventArgs e)
+        private void BtnOpenSerialPort_Click(object sender, RoutedEventArgs e)
         {
             if (!this.serialPortConnecting)
             {
@@ -228,7 +228,7 @@ namespace Zo.Xapp.Wpf.Views
                     MessageBox.Show("串口" + this.serialPort.PortName + "已经打开");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 this.serialPortConnecting = false;
                 SetConnectionStatus();
@@ -372,12 +372,12 @@ namespace Zo.Xapp.Wpf.Views
 
         #region 清空显示区
 
-        private void btClearRequestData_Click(object sender, RoutedEventArgs e)
+        private void BtnClearRequestData_Click(object sender, RoutedEventArgs e)
         {
             this.tbRequestData.Text = null;
         }
 
-        private void btClearRecevideData_Click(object sender, RoutedEventArgs e)
+        private void BtnClearRecevideData_Click(object sender, RoutedEventArgs e)
         {
             this.tbrecevideData.Text = null;
         }

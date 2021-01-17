@@ -43,9 +43,23 @@ namespace Zo.Xapp.EntityFrameworkCore
             XappEfCoreEntityExtensionMappings.Configure();
 
             var configuration = BuildConfiguration();
+            var connectionString = configuration.GetConnectionString(XappConsts.ConnectionStringName);
 
             var builder = new DbContextOptionsBuilder<XappMigrationsDbContext>()
-                .UseSqlServer(configuration.GetConnectionString(XappConsts.ConnectionStringName));
+            //.UseSqlServer(connectionString);
+
+            /*-------------------------------使用MySQL数据库------------------------------
+            //https://github.com/abpframework/abp/blob/baec4745e424fea128c4575df3743ad4b50c2bec/docs/en/Entity-Framework-Core-MySQL.md
+            //https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql/pull/1233
+            //MySQL数据库连接字符串： https://www.connectionstrings.com/mysql/ ，
+                看MySQL Connector/Net: https://www.connectionstrings.com/mysql-connector-net-mysqlconnection/
+            //mysql数据库版本查看方法：
+            //安装mysql后，有一个名为：mysql的数据库，选中，查询：select version()， 比如输出：5.6.34-log，即是数据库版本
+            */
+            //.UseMySql(connectionString, ServerVersion.FromString("5.6.34-log"));
+            .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)); //自动检测，推荐
+
+           /*-------------------------------使用MySQL数据库------------------------------*/
 
             return new XappMigrationsDbContext(builder.Options);
         }

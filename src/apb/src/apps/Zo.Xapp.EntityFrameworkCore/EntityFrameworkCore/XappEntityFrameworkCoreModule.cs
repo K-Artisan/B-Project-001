@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
-using Volo.Abp.EntityFrameworkCore.SqlServer;
+using Volo.Abp.EntityFrameworkCore.MySQL;
+//using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
 
 namespace Zo.Xapp.EntityFrameworkCore
 {
     [DependsOn(
         typeof(XappDomainModule),
-        typeof(AbpEntityFrameworkCoreSqlServerModule)
+        //typeof(AbpEntityFrameworkCoreSqlServerModule) //MS SqlServer 数据库
+        typeof(AbpEntityFrameworkCoreMySQLModule) // MySQL 数据库
         )]
     public class XappEntityFrameworkCoreModule : AbpModule
     {
@@ -33,7 +35,8 @@ namespace Zo.Xapp.EntityFrameworkCore
             {
                 /* The main point to change your DBMS.
                  * See also XappMigrationsDbContextFactory for EF Core tooling. */
-                options.UseSqlServer();
+                //options.UseSqlServer();
+                options.UseMySQL();
             });
         }
     }
