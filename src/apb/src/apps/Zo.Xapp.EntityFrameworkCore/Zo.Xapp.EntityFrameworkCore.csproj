@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Zo.Xapp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="4.1.1" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zo.Xapp.Domain\Zo.Xapp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

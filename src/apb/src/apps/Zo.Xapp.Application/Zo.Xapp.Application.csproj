@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Zo.Xapp</RootNamespace>
+    <AssemblyName>Zo.Xapp.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zo.Xapp.Application.Contracts\Zo.Xapp.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Zo.Xapp.Domain\Zo.Xapp.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Account.Application" Version="4.1.1" />
+	</ItemGroup>
+
+</Project>

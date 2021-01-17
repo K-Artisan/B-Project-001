@@ -1,0 +1,17 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Zo.Xapp.Wpf.Ui">
+    <ResourceDictionary.MergedDictionaries>
+
+        <ResourceDictionary Source="../Styles/BrushResource.xaml"/>
+        <ResourceDictionary Source="../Styles/TextBlockResource.xaml"/>
+        <ResourceDictionary Source="../Styles/TextBoxResource.xaml"/>
+        <ResourceDictionary Source="../Styles/ButtonResource.xaml"/>
+        <ResourceDictionary Source="../Styles/RadioButtonResource.xaml"/>
+
+        <ResourceDictionary Source="../Styles/CustomControl1.xaml"/>
+        <ResourceDictionary Source="../Styles/DynamicImageButton/DynamicImageButton.xaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

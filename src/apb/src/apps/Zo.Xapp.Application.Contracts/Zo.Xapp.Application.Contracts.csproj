@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Zo.Xapp</RootNamespace>
+    <AssemblyName>Zo.Xapp.Application.Contracts</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zo.Xapp.Domain.Shared\Zo.Xapp.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

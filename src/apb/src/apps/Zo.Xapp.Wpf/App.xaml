@@ -1,0 +1,21 @@
+﻿<Application x:Class="Zo.Xapp.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:xappUi="clr-namespace:Zo.Xapp.Wpf.Ui;assembly=Zo.Xapp.Wpf.Ui"   
+             xmlns:local="clr-namespace:Zo.Xapp.Wpf">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <!-- MahApps.Metro Theme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/Zo.Xapp.Wpf.Ui;component/Themes/Generic.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+            <!--<Style TargetType="{x:Type mah:WindowButtonCommands}" BasedOn="{StaticResource MahApps.Styles.WindowButtonCommands.Win10}" />-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
