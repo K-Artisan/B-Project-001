@@ -18,7 +18,7 @@ namespace Zo.Xapp.EntityFrameworkCore
         )]
     public class XappEntityFrameworkCoreModule : AbpModule
     {
-        public override void PreConfigureServices(ServiceConfigurationContext context)
+        public override void PreConfigureServices(ServiceConfigurationContext context) 
         {
         }
 

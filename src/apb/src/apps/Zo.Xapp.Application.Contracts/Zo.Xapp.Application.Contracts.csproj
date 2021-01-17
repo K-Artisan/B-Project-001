@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Zo.Xapp.Domain.Shared\Zo.Xapp.Domain.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\" />
+  </ItemGroup>
+
 </Project>

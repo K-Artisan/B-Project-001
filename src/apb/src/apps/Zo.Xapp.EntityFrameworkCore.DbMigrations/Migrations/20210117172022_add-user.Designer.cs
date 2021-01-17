@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 using Zo.Xapp.EntityFrameworkCore;
@@ -9,9 +10,10 @@ using Zo.Xapp.EntityFrameworkCore;
 namespace Zo.Xapp.Migrations
 {
     [DbContext(typeof(XappMigrationsDbContext))]
-    partial class XappMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210117172022_add-user")]
+    partial class adduser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

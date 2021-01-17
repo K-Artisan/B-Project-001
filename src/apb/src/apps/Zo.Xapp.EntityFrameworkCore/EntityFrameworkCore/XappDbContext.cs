@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using Zo.Xapp.Users;
 
 namespace Zo.Xapp.EntityFrameworkCore
 {
@@ -16,7 +17,7 @@ namespace Zo.Xapp.EntityFrameworkCore
      * just create a structure like done for AppUser.
      *
      * Don't use this DbContext for database migrations since it does not contain tables of the
-     * used modules (as explained above). See ShootingRangeMigrationsDbContext for migrations.
+     * used modules (as explained above). See XappMigrationsDbContext for migrations.
      */
     [ConnectionStringName(XappConsts.ConnectionStringName)]
     public class XappDbContext : AbpDbContext<XappDbContext>
@@ -25,6 +26,10 @@ namespace Zo.Xapp.EntityFrameworkCore
          * Also map them inside ShootingRangeDbContextModelCreatingExtensions.ConfigureShootingRange
          */
         //public DbSet<AppUser> Users { get; set; }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserFingerprint> UserFingerprint { get; set; }
+
 
         public XappDbContext(DbContextOptions<XappDbContext> options) 
             : base(options)
